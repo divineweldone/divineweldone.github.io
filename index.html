@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Otumere Weldone — Governance & Policy Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1714;
+    --ink-muted: #5a5650;
+    --ink-faint: #9a9590;
+    --paper: #f9f6f0;
+    --cream: #ede9e0;
+    --gold: #b8860b;
+    --gold-light: #e8d080;
+    --rust: #8b3a1a;
+    --teal: #1a5f5a;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(249,246,240,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--cream);
+  }
+
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8rem 4rem 5rem;
+    position: relative;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(184,134,11,0.04) 40px,
+      rgba(184,134,11,0.04) 41px
+    );
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.8rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.92;
+    color: #f9f6f0;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+
+  .hero-name span {
+    display: block;
+    color: var(--gold-light);
+  }
+
+  .hero-right {
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 5rem;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+  }
+
+  .hero-bio {
+    font-size: 0.97rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    max-width: 36ch;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .stat {
+    border-top: 2px solid var(--gold);
+    padding-top: 0.75rem;
+  }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+    margin-top: 0.2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-contact {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+  }
+
+  .btn-dark {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .btn-dark:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink-faint);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+  }
+
+  .btn-gold:hover {
+    background: #9a6f00;
+    border-color: #9a6f00;
+    color: #fff;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 4rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--cream);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+    max-width: 20ch;
+  }
+
+  /* ABOUT */
+  .about-section { background: white; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .about-text p:first-child {
+    font-size: 1.2rem;
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.6;
+  }
+
+  .about-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .skills-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.78rem;
+    border: 1px solid var(--cream);
+    background: var(--paper);
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+
+  /* EXPERIENCE */
+  .experience-section { background: var(--paper); }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 200px 1px 1fr;
+    gap: 0 2.5rem;
+    position: relative;
+  }
+
+  .timeline-meta {
+    padding: 0 0 3rem 0;
+    text-align: right;
+  }
+
+  .timeline-period {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-org {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .timeline-spine {
+    position: relative;
+    background: var(--cream);
+    width: 1px;
+  }
+
+  .timeline-spine::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .timeline-content {
+    padding: 0 0 3rem 0;
+  }
+
+  .timeline-role {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .timeline-bullets li {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.75rem;
+  }
+
+  /* PUBLICATIONS */
+  .publications-section { background: var(--ink); }
+
+  .publications-section .section-label { color: var(--gold-light); }
+  .publications-section .section-rule { background: rgba(255,255,255,0.08); }
+  .publications-section .section-title { color: #f9f6f0; }
+
+  .pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.06);
+  }
+
+  .pub-card {
+    background: var(--ink);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+
+  .pub-card:hover { background: #26231f; }
+
+  .pub-year {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .pub-title {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f9f6f0;
+    line-height: 1.4;
+  }
+
+  .pub-journal {
+    font-size: 0.8rem;
+    color: rgba(249,246,240,0.4);
+    line-height: 1.4;
+  }
+
+  .pub-type {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid;
+  }
+
+  .pub-type.journal { color: var(--gold); border-color: rgba(184,134,11,0.4); }
+  .pub-type.policy { color: #7ecac0; border-color: rgba(126,202,192,0.4); }
+  .pub-type.chapter { color: #e08080; border-color: rgba(224,128,128,0.4); }
+  .pub-type.forthcoming { color: rgba(249,246,240,0.4); border-color: rgba(249,246,240,0.15); }
+
+  /* CONTACT */
+  .contact-section { background: var(--cream); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    font-size: 0.9rem;
+  }
+
+  .contact-key {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    min-width: 60px;
+  }
+
+  .contact-val {
+    color: var(--ink);
+  }
+
+  .contact-val a { color: var(--teal); text-decoration: none; }
+  .contact-val a:hover { text-decoration: underline; }
+
+  /* CONTACT FORM */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: white;
+    border: 1px solid #d6d0c4;
+    padding: 0.7rem 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    resize: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group textarea { height: 130px; }
+
+  .form-submit {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  .form-success {
+    display: none;
+    background: #eaf5ee;
+    border: 1px solid #a3d9b0;
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+    color: #1a5f3a;
+  }
+
+  .referees {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .referees-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0;
+  }
+
+  .referee-card {
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+  }
+
+  .referee-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .referee-title {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin-top: 0.15rem;
+  }
+
+  .referee-email {
+    font-size: 0.8rem;
+    color: var(--teal);
+    margin-top: 0.15rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 0.78rem;
+    color: rgba(249,246,240,0.35);
+  }
+
+  footer .footer-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(249,246,240,0.6);
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--paper); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease 0.1s both; }
+  .hero-name    { animation: fadeUp 0.6s ease 0.25s both; }
+  .hero-title   { animation: fadeUp 0.6s ease 0.2s both; }
+  .hero-bio     { animation: fadeUp 0.6s ease 0.35s both; }
+  .hero-stats   { animation: fadeUp 0.6s ease 0.45s both; }
+  .hero-contact { animation: fadeUp 0.6s ease 0.55s both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 7rem 2rem 3rem; }
+    .hero-right { padding: 3rem 2rem 4rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .timeline-item { grid-template-columns: 120px 1px 1fr; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-brand">D. O. Weldone</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" style="padding: 0;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Governance &amp; Policy Professional</div>
+    <h1 class="hero-name">
+      Divine<br>
+      Otumere<br>
+      <span>Weldone</span>
+    </h1>
+  </div>
+  <div class="hero-right">
+    <h2 class="hero-title">Research. Policy.<br>Advocacy. Impact.</h2>
+    <p class="hero-bio">Seven years advancing democracy, peace, and security across Nigeria and West Africa through rigorous research, peer-reviewed scholarship, and direct policy engagement.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Years experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Publications</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Policy outlets</div>
+      </div>
+    </div>
+    <div class="hero-contact">
+      <a href="#contact" class="btn btn-dark">Get in touch</a>
+      <a href="#publications" class="btn btn-outline">View publications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-header">
+    <span class="section-label">About</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Governance and policy professional with a record of producing research that informs real decisions — from electoral reform in Nigeria to regional security across the Sahel.</p>
+      <p>Currently completing an MSc at Niger Delta University, I bring both academic rigour and field experience to complex governance challenges. My work sits at the intersection of democracy, corruption, and peace — combining peer-reviewed research with direct advocacy to drive meaningful change.</p>
+      <p>I have designed research frameworks, led multi-stakeholder engagements, supervised research teams, and authored publications for internationally recognised journals and think tanks including the Centre for Democracy and Development (CDD-West Africa).</p>
+      <div class="about-actions">
+        <a href="Divine_Otumere_Weldone_CV.pdf" download class="btn btn-gold">Download CV (PDF)</a>
+        <a href="#contact" class="btn btn-outline">Contact me</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem;">Core competencies</p>
+      <div class="skills-panel">
+        <span class="skill-tag">Policy research &amp; writing</span>
+        <span class="skill-tag">Programme coordination</span>
+        <span class="skill-tag">Monitoring &amp; evaluation</span>
+        <span class="skill-tag">Stakeholder engagement</span>
+        <span class="skill-tag">Research project management</span>
+        <span class="skill-tag">Survey design &amp; data analysis</span>
+        <span class="skill-tag">Grant proposal writing</span>
+        <span class="skill-tag">Knowledge management</span>
+        <span class="skill-tag">Peacebuilding &amp; advocacy</span>
+        <span class="skill-tag">Mentoring &amp; team leadership</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="section-header">
+    <span class="section-label">Experience</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title" style="margin-bottom: 3.5rem;">Professional record</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-period">Jan – Jun 2024</div>
+        <div class="timeline-org">Initiative for Research, Innovation and Advocacy in Development, Abuja</div>
+      </div>
+      <div class="timeline-spine"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Research Officer</div>
+        <ul class="timeline-bullets">
+          <li>Led and coordinated research projects on electoral governance, gender and social inclusion, and democracy in Nigeria.</li>
+          <li>Produced policy briefs, analytical reports, and press statements to support advocacy.</li>
+          <li>Supported grant deliverables by drafting proposals, concept notes, and reviewing reports.</li>
+          <li>Supervised and mentored research interns to ensure productivity and adherence to research standards.</li>
+          <li>Engaged with civil society actors, academics, and policy practitioners across research initiatives.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-period">May – Dec 2023</div>
+        <div class="timeline-org">Initiative for Research, Innovation and Advocacy in Development</div>
+      </div>
+      <div class="timeline-spine"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Research Associate</div>
+        <ul class="timeline-bullets">
+          <li>Managed research interns to ensure productivity and adherence to research standards.</li>
+          <li>Drafted research reports and press statements for public dissemination.</li>
+          <li>Proofread and strengthened written briefs, reports, and public statements.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-period">2022</div>
+        <div class="timeline-org">Peace to the Streets and Creeks Movement, Yenagoa, Bayelsa State</div>
+      </div>
+      <div class="timeline-spine"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Programme and Research Associate</div>
+        <ul class="timeline-bullets">
+          <li>Coordinated youth-focused peacebuilding and sensitisation activities across multiple communities in Bayelsa State.</li>
+          <li>Contributed to community outreach campaigns addressing cultism, youth violence, and electoral-related tensions.</li>
+          <li>Supported development of communication materials and advocacy content promoting peace education.</li>
+          <li>Documented project activities and contributed to reports on community peacebuilding outcomes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-period">2016 – Present</div>
+        <div class="timeline-org">Various clients, Nigeria</div>
+      </div>
+      <div class="timeline-spine"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Freelance Research and Policy Consultant</div>
+        <ul class="timeline-bullets">
+          <li>Conducted field research, data analysis, and policy writing for governance and development projects.</li>
+          <li>Prepared policy briefs and research reports for NGOs and individual clients.</li>
+          <li>Served as rapporteur for state-led events.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="publications-section" id="publications">
+  <div class="section-header">
+    <span class="section-label">Scholarship</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title" style="margin-bottom: 3.5rem; color: #f9f6f0;">Selected publications</h2>
+
+  <div class="pub-grid">
+
+    <a href="https://www.cddwestafrica.org/blog/how-can-reconciliation-improve-buy-in-for-operation-safe-corridor/" target="_blank" rel="noopener" class="pub-card">
+      <span class="pub-year">2026</span>
+      <p class="pub-title">How can reconciliation improve buy-in for Operation Safe Corridor?</p>
+      <p class="pub-journal">Centre for Democracy and Development (CDD-West Africa)</p>
+      <span class="pub-type policy">Policy brief</span>
+    </a>
+
+    <div class="pub-card" style="cursor: default;">
+      <span class="pub-year">2026 — Forthcoming</span>
+      <p class="pub-title">The necessity for restructuring in Nigeria: Balancing structure, identity and security</p>
+      <p class="pub-journal">Nigerian Political Science Association (co-authored with J. Cocodia)</p>
+      <span class="pub-type forthcoming">Forthcoming</span>
+    </div>
+
+    <a href="https://www.cddwestafrica.org/blog/why-a-state-of-emergency-in-rivers-state-is-a-bad-idea/" target="_blank" rel="noopener" class="pub-card">
+      <span class="pub-year">2025</span>
+      <p class="pub-title">Why a state of emergency in Rivers State is a bad idea</p>
+      <p class="pub-journal">Centre for Democracy and Development (CDD-West Africa)</p>
+      <span class="pub-type policy">Policy brief</span>
+    </a>
+
+    <div class="pub-card" style="cursor: default;">
+      <span class="pub-year">2025</span>
+      <p class="pub-title">Institutional weaknesses and corruption in Nigeria: Implications for democratisation amidst West Africa's coup wave</p>
+      <p class="pub-journal">Journal of Political Science and Leadership Research, 11(10), 172–184 (with F. D. Prince)</p>
+      <span class="pub-type journal">Journal article</span>
+    </div>
+
+    <div class="pub-card" style="cursor: default;">
+      <span class="pub-year">2025</span>
+      <p class="pub-title">Resurgence of military rule in West Africa and the formation of the Alliance of Sahel States: Implications for regional stability</p>
+      <p class="pub-journal">Journal of Political Science and Leadership Research, 11(8), 78–93 (with C. E. Tokpo)</p>
+      <span class="pub-type journal">Journal article</span>
+    </div>
+
+    <div class="pub-card" style="cursor: default;">
+      <span class="pub-year">2024</span>
+      <p class="pub-title">Ethno-territorial conflict and national integration: The case of herders and farmers in Nigeria</p>
+      <p class="pub-journal">International Journal of Strategic Research in Public Administration and Organizational Process, 4(1) (with S. E. Ogroh &amp; J. E. Abari)</p>
+      <span class="pub-type journal">Journal article</span>
+    </div>
+
+    <div class="pub-card" style="cursor: default;">
+      <span class="pub-year">2021</span>
+      <p class="pub-title">Nigeria: The challenges of herders-farmers' conflict and national integration</p>
+      <p class="pub-journal">In Ibaba, Cocodia &amp; Sanubi (Eds.), Tragedy of a Nation. Zelon Integrated Services Ltd. (with S. E. Ogroh &amp; E. J. Abari)</p>
+      <span class="pub-type chapter">Book chapter</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-header">
+    <span class="section-label">Contact</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="contact-grid">
+
+    <!-- Left: details + referees -->
+    <div>
+      <p class="contact-intro">Available for research collaborations, consultancy, and policy engagements.</p>
+      <div class="contact-details">
+        <div class="contact-row">
+          <span class="contact-key">Email</span>
+          <span class="contact-val"><a href="mailto:weldonedivineo@gmail.com">weldonedivineo@gmail.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Phone</span>
+          <span class="contact-val">+234 906 566 7431</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Location</span>
+          <span class="contact-val">Yenagoa, Bayelsa State, Nigeria</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Focus</span>
+          <span class="contact-val">Nigeria &amp; West Africa</span>
+        </div>
+      </div>
+
+      <p class="referees-label">Referees</p>
+      <div class="referees">
+        <div class="referee-card">
+          <div class="referee-name">Prof. Jude Cocodia</div>
+          <div class="referee-title">Department of Political Science, Niger Delta University</div>
+          <div class="referee-email">jcocodia41@gmail.com</div>
+        </div>
+        <div class="referee-card">
+          <div class="referee-name">Angalapu Dengiyefa</div>
+          <div class="referee-title">Research Analyst, Centre for Democracy and Development, West Africa</div>
+          <div class="referee-email">greatdengis@gmail.com</div>
+        </div>
+        <div class="referee-card">
+          <div class="referee-name">Prof. Iyabrade Ikporukpo</div>
+          <div class="referee-title">Department of Political Science, Niger Delta University</div>
+          <div class="referee-email">ijikporukpo@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: contact form -->
+    <div>
+      <p style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.5rem;">Send a message</p>
+
+      <div class="form-success" id="formSuccess">
+        Your message has been sent. I will get back to you shortly.
+      </div>
+
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option value="">Select a reason for contact</option>
+            <option value="research">Research collaboration</option>
+            <option value="consultancy">Consultancy enquiry</option>
+            <option value="speaking">Speaking engagement</option>
+            <option value="media">Media enquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Describe your enquiry or opportunity..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-dark" onclick="handleSubmit()">Send message</button>
+          <span class="form-note">Typically responds within 48 hours.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span class="footer-brand">Divine Otumere Weldone</span>
+  <p>Governance &amp; Policy Professional — Nigeria &amp; West Africa</p>
+</footer>
+
+<script>
+  function handleSubmit() {
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+
+    const subject  = document.getElementById('subject').value;
+    const subjectLine = subject
+      ? 'Portfolio enquiry: ' + document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text
+      : 'Portfolio enquiry';
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+
+    window.location.href = 'mailto:weldonedivineo@gmail.com?subject=' + encodeURIComponent(subjectLine) + '&body=' + body;
+
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
